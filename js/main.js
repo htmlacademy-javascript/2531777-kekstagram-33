@@ -2,7 +2,7 @@ const PHOTO_COUNT = 25;
 
 const NAMES = ['Виктор', 'Сергей', 'Наталья', 'Марина', 'Святослав', 'Юлия'];
 const MESSAGE = ['Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.', 'В целом всё неплохо. Но не всё.'];
-const DESCRIPTION = ['Отличное фото','Супер!'];
+const DESCRIPTIONS = ['Отличное фото','Супер!'];
 
 const objectId = [];
 const commentId = [];
@@ -42,9 +42,9 @@ const createComment = () => ({
 const createPost = () => ({
     id: getRandomNumber(1, 25, true),
     url: 'photos/${getRandomNumber(1, 25,)}.jpg',
-    description: DESCRIPTION[getRandomNumber{0, DESCRIPTION.length - 1}],
+    description: DESCRIPTIONS[getRandomNumber{0, DESCRIPTIONS.length - 1}],
     likes: getRandomNumber(15, 200),
-    commenys: Array.from({length: getRandomNumber(0, 30) }, createComment),
+    comments: Array.from({length: getRandomNumber(0, 30) }, createComment),
 });
 
 const objects = Array.from({ length:PHOTO_COUNT}, createPost);
